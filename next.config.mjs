@@ -18,9 +18,7 @@ const nextConfig = {
   // 정적 HTML 내보내기 형식 설정
   experimental: {
     appDocumentPreloading: false
-  },
-  // swc 경고 무시
-  swcMinify: false
+  }
 }
 
 export default nextConfig
