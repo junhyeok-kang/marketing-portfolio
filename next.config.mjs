@@ -10,10 +10,17 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  // 아래 basePath와 assetPrefix는 GitHub 저장소 이름에 맞게 수정해야 합니다
-  // 예: 저장소 이름이 'marketing-portfolio'인 경우
-  basePath: process.env.NODE_ENV === 'production' ? '/marketing-portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/marketing-portfolio/' : '',
+  distDir: 'dist',
+  // username.github.io 형식의 저장소는 basePath와 assetPrefix가 필요하지 않습니다
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true,
+  // 정적 HTML 내보내기 형식 설정
+  experimental: {
+    appDocumentPreloading: false
+  },
+  // swc 경고 무시
+  swcMinify: false
 }
 
 export default nextConfig
