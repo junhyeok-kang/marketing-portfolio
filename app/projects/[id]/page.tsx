@@ -136,6 +136,13 @@ const projects = [
   },
 ]
 
+// 정적 내보내기를 위한 generateStaticParams 함수 추가
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }))
+}
+
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id)
 

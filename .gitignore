@@ -5,7 +5,8 @@
 
 # next.js
 /.next/
-/out/
+# 주석 처리: GitHub Pages 배포를 위해 out 디렉토리를 추적해야 함
+# /out/
 
 # production
 /build
